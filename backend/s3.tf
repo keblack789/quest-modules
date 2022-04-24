@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "terraform-state" {
- bucket = "kaybee-tfstate"
+ bucket = "quest-tfstate"
  acl    = "private"
 
  versioning {
