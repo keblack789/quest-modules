@@ -1,4 +1,3 @@
-## ALB SG
 resource "aws_security_group" "alb" {
   name        = "${var.env}-${var.service}-alb-sg"
   description = "alb rules for ${var.env} ${var.service} access"
@@ -27,7 +26,6 @@ resource "aws_security_group_rule" "allow_out_alb" {
   security_group_id = aws_security_group.alb.id
 }
 
-## ECS SG
 resource "aws_security_group" "ecs" {
   name        = "${var.env}-${var.service}-ecs-sg"
   description = "rules for ${var.env} ${var.service} access"

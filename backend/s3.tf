@@ -17,7 +17,7 @@ resource "aws_s3_bucket_acl" "acl" {
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "sse" {
-  bucket = aws_s3_bucket.terraform-state.bucket
+  bucket = aws_s3_bucket.terraform-state.id
 
   rule {
     apply_server_side_encryption_by_default {
